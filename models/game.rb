@@ -1,43 +1,36 @@
 class Game
 
-  def initialize(random_choice)
+  def initialize(random_choice = nil)
     @random_choice = random_choice
-
   end
 
-  def rock()
+  def player_rock()
     if @random_choice == "scissors"
-      return "You lose"
+      return "You win!"
     elsif @random_choice == "paper"
-      return "You win"
-    elsif @random_choice == "rock"
-      return "Draw"
-    else
-      return "Not valid"
+      return "You lose!"
+    else @random_choice == "rock"
+      return "It's a draw!"
     end
   end
 
-  def paper()
+  def player_paper()
     if @random_choice == "rock"
-      return "You lose"
+      return "You win!"
     elsif @random_choice == "scissors"
-      return "You win"
-    elsif @random_choice == "paper"
-      return "Draw"
-    else
-      return "Not valid"
+      return "You lose!"
+    else @random_choice == "paper"
+      return "It's a draw!"
     end
   end
 
-  def scissors()
+  def player_scissors()
     if @random_choice == "paper"
-      return "You lose"
+      return "You win!"
     elsif @random_choice == "rock"
-      return "You win"
-    elsif @random_choice == "scissors"
-      return "Draw"
-    else
-      return "Not valid"
+      return "You lose!"
+    else @random_choice == "scissors"
+      return "It's a draw!"
     end
   end
 

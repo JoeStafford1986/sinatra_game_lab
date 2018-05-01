@@ -3,20 +3,20 @@ require('sinatra/contrib/all')
 
 require_relative('models/game')
 
-get '/rock/:opponent_choice' do
-  game = Game.new(params[:opponent_choice])
+get '/rock' do
+  game = Game.new(Game.computer_choice())
   @outcome = game.rock()
   erb( :result )
 end
 
-get '/scissors/:opponent_choice' do
-  game = Game.new(params[:opponent_choice])
+get '/scissors' do
+  game = Game.new(Game.computer_choice())
   @outcome = game.scissors()
   erb( :result )
 end
 
-get '/paper/:opponent_choice' do
-  game = Game.new(params[:opponent_choice])
+get '/paper' do
+  game = Game.new(Game.computer_choice())
   @outcome = game.paper()
   erb( :result )
 end
