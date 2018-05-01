@@ -11,40 +11,44 @@ class GameTest < Minitest::Test
     @game3 = Game.new("paper")
   end
 
-  def test_rock__loses
+  def .test_player_rock__loses
     assert_equal("You lose!", @game3.player_rock())
   end
 
-  def test_rock__wins
+  def .test_player_rock__wins
     assert_equal("You win!", @game1.player_rock())
   end
 
-  def test_rock__draw
+  def .test_player_rock__draw
     assert_equal("It's a draw!", @game2.player_rock())
   end
 
-  def test_paper__loses
+  def .test_player_paper__loses
     assert_equal("You lose!", @game1.player_paper())
   end
 
-  def test_paper__wins
+  def .test_player_paper__wins
     assert_equal("You win!", @game2.player_paper())
   end
 
-  def test_paper__draw
+  def .test_player_paper__draw
     assert_equal("It's a draw!", @game3.player_paper())
   end
 
-  def test_scissors__loses
+  def .test_player_scissors__loses
     assert_equal("You lose!", @game2.player_scissors())
   end
 
-  def test_scissors__wins
+  def .test_player_scissors__wins
     assert_equal("You win!", @game3.player_scissors())
   end
 
-  def test_scissors__draw
+  def .test_player_scissors__draw
     assert_equal("It's a draw!", @game1.player_scissors())
+  end
+
+  def test_computer_choice
+
   end
 
 end
