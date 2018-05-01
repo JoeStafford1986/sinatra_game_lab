@@ -9,55 +9,42 @@ class GameTest < Minitest::Test
     @game1 = Game.new("scissors")
     @game2 = Game.new("rock")
     @game3 = Game.new("paper")
-    @game4 = Game.new("Invalid Entry")
   end
 
   def test_rock__loses
-    assert_equal("You lose", @game1.rock())
+    assert_equal("You lose!", @game3.player_rock())
   end
 
   def test_rock__wins
-    assert_equal("You win", @game3.rock())
+    assert_equal("You win!", @game1.player_rock())
   end
 
   def test_rock__draw
-    assert_equal("Draw", @game2.rock())
-  end
-
-  def test_rock__invalid
-    assert_equal("Not valid", @game4.rock())
+    assert_equal("It's a draw!", @game2.player_rock())
   end
 
   def test_paper__loses
-    assert_equal("You lose", @game2.paper())
+    assert_equal("You lose!", @game1.player_paper())
   end
 
   def test_paper__wins
-    assert_equal("You win", @game1.paper())
+    assert_equal("You win!", @game2.player_paper())
   end
 
   def test_paper__draw
-    assert_equal("Draw", @game3.paper())
-  end
-
-  def test_paper__invalid
-    assert_equal("Not valid", @game4.paper())
+    assert_equal("It's a draw!", @game3.player_paper())
   end
 
   def test_scissors__loses
-    assert_equal("You lose", @game3.scissors())
+    assert_equal("You lose!", @game2.player_scissors())
   end
 
   def test_scissors__wins
-    assert_equal("You win", @game2.scissors())
+    assert_equal("You win!", @game3.player_scissors())
   end
 
   def test_scissors__draw
-    assert_equal("Draw", @game1.scissors())
-  end
-
-  def test_scissors__invalid
-    assert_equal("Not valid", @game4.scissors())
+    assert_equal("It's a draw!", @game1.player_scissors())
   end
 
 end
