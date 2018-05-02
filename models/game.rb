@@ -1,5 +1,7 @@
 class Game
 
+  attr_reader :random_choice
+
   def initialize(random_choice = nil)
     @random_choice = random_choice
   end
@@ -34,7 +36,7 @@ class Game
     end
   end
 
-  def self.computer_choice
+  def self.computer_choice()
     choice = ["rock", "paper", "scissors"].sample
     return choice
   end

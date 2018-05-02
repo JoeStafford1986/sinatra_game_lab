@@ -1,7 +1,18 @@
 body {
-  background-color: steelblue;
+  background-color: blue;
+}
+
+p {
+  font-size: 15;
+  color: orangered;
 }
 
 p1 {
-  color: green;
+  font-size: 15;
+  color: tomato;
+}
+
+p2 {
+  font-size: 15;
+  color: red;
 }
